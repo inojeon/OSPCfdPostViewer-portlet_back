@@ -1,0 +1,103 @@
+
+.line  {
+    fill: none;
+    stroke: black;
+    stroke-width: 0.3;
+    vector-effect: non-scaling-stroke;
+}
+  
+.axis line {
+    stroke-opacity: 0.1;
+    shape-rendering: crispEdges;
+}
+  .edgh {
+    fill: white;
+    fill-opacity: 0;
+    stroke: black;
+    stroke-opacity: 0;
+    stroke-width: 0;
+    vector-effect: non-scaling-stroke;
+  }
+
+
+.wb-appFrame {
+    background-color: #f6f6f6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-row-gap: 7px;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: "header" "ViewerColumn";
+}
+.wb-appFrame-header {
+    grid-area: header;
+    padding-left : 10px;
+    padding-top : 10px;
+    background-color: #ffffff;
+
+    padding-right : 10px;
+
+}
+.wb-appFrame-ViewerColumn {
+    display: block;
+    position: relative;
+    grid-area: ViewerColumn;
+    height: calc(100vh - 57px);
+    max-width: calc(100vw);
+}
+
+.wb-appFrame-settingsContainer {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    padding-right: 10px;
+    margin-left : 30px;
+    margin-top : 10px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.wb-settingsPanel {
+    z-index: 4;
+    background: #fff;
+    max-height: 100%;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.05);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+}
+.settingPanel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 320px;
+  background: #fff;
+  padding: 0 !important;
+}
+
+.message-line-margin{
+  padding-bottom: 1.25em;
+}
+
+.header-inline-flex {
+  display : inline-flex;
+}
+
+.level-left .level-item:not(:last-child) {
+  margin-right: 0.75rem !important;
+}
+
+.level-left {
+    display: flex;
+}
+.level {
+    display: flex !important;
+}
+.level-item {
+    margin-bottom: 0rem !important;
+}
