@@ -9,7 +9,7 @@
 
 <portlet:resourceURL var="serveResourceURL"></portlet:resourceURL>
 <%
-OSPVisualizerConfig visualizerConfig = OSPVisualizerUtil.getVisualizerConfig(renderRequest, portletDisplay);
+OSPVisualizerConfig visualizerConfig = OSPVisualizerUtil.getVisualizerConfig(renderRequest, portletDisplay, user);
 %>
 
 <div class="container-fluid osp-visualizer">
