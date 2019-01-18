@@ -12,7 +12,7 @@
 OSPVisualizerConfig visualizerConfig = OSPVisualizerUtil.getVisualizerConfig(renderRequest, portletDisplay, user);
 %>
 
-<div class="container-fluid osp-visualizer">
+<div class="container-fluid osp-visualizer" style="padding: 0px;!important">
 		<iframe 
 				class="col-sm-12 osp-iframe-canvas iframe-canvas"  
 				style="<%=visualizerConfig.getDisplayStyle()%> border:0;padding:0;" 
@@ -74,6 +74,9 @@ function <portlet:namespace/>loadCFDPOST( jsonData, changeAlert ){
 		break;
 	case OSP.Enumeration.PathType.FOLDER:
 	case OSP.Enumeration.PathType.EXT:
+			<portlet:namespace/>regularString = new RegExp("result_....rlt");
+			console.log(<portlet:namespace/>regularString);
+			<portlet:namespace/>jsonData = jsonData;
 	    <portlet:namespace/>visualizer.getFolderInfo( jsonData.parent_, '' );
 		break;
 	case OSP.Enumeration.PathType.CONTENT:
